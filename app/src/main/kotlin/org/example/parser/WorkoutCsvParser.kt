@@ -61,12 +61,12 @@ object WorkoutCsvParser {
     }
 
     private fun parseDateTime(value: String): LocalDateTime? {
-        return dateFormatters.asSequence().mapNotNull { formatter ->
+        return dateFormatters.firstNotNullOfOrNull { formatter ->
             try {
                 LocalDateTime.parse(value, formatter)
             } catch (exception: DateTimeParseException) {
                 null
             }
-        }.firstOrNull()
+        }
     }
 }

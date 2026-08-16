@@ -18,10 +18,7 @@ object WorkoutCsvParser {
         val records = CsvParser.parse(inputPath)
         if (records.isEmpty()) return emptyList()
 
-        val trimmedRecords = records.map {record ->
-            record.map { it.trim(' ', '\"') }
-        }
-        val header = records.first()
+        val header = records.first().map { it.trim() }
         val titleIndex = header.indexOf("title")
         val startTimeIndex = header.indexOf("start_time")
         val exerciseTitleIndex = header.indexOf("exercise_title")
@@ -37,9 +34,9 @@ object WorkoutCsvParser {
                 return@mapNotNull null
             }
 
-            val title = record[titleIndex]
-            val startTimeText = record[startTimeIndex]
-            val exerciseTitle = record[exerciseTitleIndex]
+            val title = record[titleIndex].trim()
+            val startTimeText = record[startTimeIndex].trim()
+            val exerciseTitle = record[exerciseTitleIndex].trim()
             if (title.isEmpty() || startTimeText.isEmpty() || exerciseTitle.isEmpty()) {
                 println("Skipping row because required field empty: title='$title', startTime='$startTimeText', exerciseTitle='$exerciseTitle'")
                 return@mapNotNull null
@@ -50,8 +47,8 @@ object WorkoutCsvParser {
                 println("Skipping row because date parse failed: '$startTimeText'")
                 return@mapNotNull null
             }
-            val weightKg = record.getOrNull(weightIndex)?.takeIf { it.isNotBlank() }?.toDoubleOrNull()
-            val reps = record.getOrNull(repsIndex)?.takeIf { it.isNotBlank() }?.toIntOrNull()
+            val weightKg = record.getOrNull(weightIndex)?.trim()?.takeIf { it.isNotBlank() }?.toDoubleOrNull()
+            val reps = record.getOrNull(repsIndex)?.trim()?.takeIf { it.isNotBlank() }?.toIntOrNull()
 
             WorkoutRow(
                 title = title,

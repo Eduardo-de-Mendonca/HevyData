@@ -5,7 +5,25 @@
       "label": "Run tests",
       "type": "shell",
       "command": ".\\gradlew :app:test",
-      "problemMatcher": []
+      "problemMatcher": [],
+    },
+    {
+      "label": "Run",
+      "type": "shell",
+      "command": ".\\gradlew run --args=\"X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workouts.csv\"",
+      "problemMatcher": [],
+    },
+    {
+      "label": "Run with debug",
+      "type": "shell",
+      "command": ".\\gradlew run --debug-jvm --args=\"X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workouts.csv\"",
+      "problemMatcher": [],
+    },
+    {
+      "label": "Attach debugger",
+      "type": "shell",
+      "command": "jdb -sourcepath app/src/main/kotlin -connect com.sun.jdi.SocketAttach:hostname=localhost,port=5005",
+      "problemMatcher": [],
     },
   ]
 }

@@ -29,9 +29,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
-    
+
     // Dependencies I manually added
-    // implementation("com.google.code.gson:gson:2.10.1")
+    implementation("org.apache.commons:commons-csv:1.11.0")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

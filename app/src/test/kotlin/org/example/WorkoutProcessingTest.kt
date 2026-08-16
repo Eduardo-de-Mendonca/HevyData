@@ -34,6 +34,18 @@ class WorkoutProcessingTest {
     }
 
     @Test
+    fun `parser handles bom-prefixed headers and quoted values`() {
+        val content = "\uFEFF\"title\",\"start_time\",\"exercise_title\"\n\"Treino A\",\"27 de jul. de 2026, 19:00\",\"Squat (Barbell)\"\n"
+
+        val rows = WorkoutCsvParser.parse(createTempFile(content))
+
+        assertEquals(1, rows.size)
+        assertEquals("Treino A", rows[0].title)
+        assertEquals("2026-07-27T19:00", rows[0].startTime.toString())
+        assertEquals("Squat (Barbell)", rows[0].exerciseTitle)
+    }
+
+    @Test
     fun `translation loader reads csv values`() {
         val content = """exercise_title,translation
 Bench Press (Dumbbell),Supino (Halter)

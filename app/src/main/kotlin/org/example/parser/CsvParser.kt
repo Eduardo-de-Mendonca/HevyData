@@ -18,10 +18,8 @@ object CsvParser {
         val normalized = content.removePrefix("\uFEFF")
 
         val parser = CSVParser(StringReader(normalized), format)
-        return try {
+        return parser.use { parser ->
             parser.records.map { record -> record.toList() }
-        } finally {
-            parser.close()
         }
     }
 }

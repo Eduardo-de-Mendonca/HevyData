@@ -14,13 +14,13 @@
       "problemMatcher": [],
     },
     {
-      "label": "Run with debug",
+      "label": "Run with debug (old)",
       "type": "shell",
       "command": ".\\gradlew run --debug-jvm --args=\"X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workouts.csv\"",
       "problemMatcher": [],
     },
     {
-      "label": "Attach debugger",
+      "label": "Attach debugger (old)",
       "type": "shell",
       "command": "jdb -sourcepath app/src/main/kotlin -connect com.sun.jdi.SocketAttach:hostname=localhost,port=5005",
       "problemMatcher": [],

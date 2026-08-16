@@ -31,13 +31,13 @@ dependencies {
     implementation(libs.guava)
     
     // Dependencies I manually added
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.jsoizo:kotlin-csv:2.0.0")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 

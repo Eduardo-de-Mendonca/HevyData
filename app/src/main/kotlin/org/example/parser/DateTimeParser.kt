@@ -32,12 +32,17 @@ object DateTimeParser {
 
         val timeParts = timePart?.split(":")
         val hour = timeParts?.getOrNull(0)?.toIntOrNull()
-        val minute = timeParts?.getOrNull(2)?.toIntOrNull()
+        val minute = timeParts?.getOrNull(1)?.toIntOrNull()
 
+        // Print everything for debug
+        println("Input: $value")
+        println("Parsed date parts: day=$day, month=$month, year=$year")
+        println("Parsed time parts: hour=$hour, minute=$minute")
+        
         if (day == null || month == null || year == null || hour == null || minute == null) {
             return null
         }
-        val date = LocalDate.of(year, day, month)
+        val date = LocalDate.of(year, month, day)
         val time = LocalTime.of(hour, minute)
         return LocalDateTime.of(year, month, day, hour, minute)
     }

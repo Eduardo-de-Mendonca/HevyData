@@ -20,9 +20,9 @@
       "problemMatcher": [],
     },
     {
-      "label": "Run with debug (old)",
+      "label": "Run on example data with debug (old)",
       "type": "shell",
-      "command": ".\\gradlew run --debug-jvm --args=\"X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workouts.csv\"",
+      "command": ".\\gradlew run --debug-jvm --args=${workspaceFolder}\\usage_example\\workout_data.csv",
       "problemMatcher": [],
     },
     {

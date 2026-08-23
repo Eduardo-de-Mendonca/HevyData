@@ -8,12 +8,6 @@ import java.time.format.DateTimeParseException
 import java.util.Locale
 
 object WorkoutCsvParser {
-    private val locale = Locale.forLanguageTag("pt-BR")
-    private val dateFormatters = listOf(
-        DateTimeFormatter.ofPattern("d 'de' MMM. 'de' yyyy, HH:mm", locale),
-        DateTimeFormatter.ofPattern("d 'de' MMM 'de' yyyy, HH:mm", locale)
-    )
-
     fun parse(inputPath: Path): List<WorkoutRow> {
         val records = CsvParser.parse(inputPath)
         if (records.isEmpty()) return emptyList()
@@ -61,12 +55,6 @@ object WorkoutCsvParser {
     }
 
     private fun parseDateTime(value: String): LocalDateTime? {
-        return dateFormatters.firstNotNullOfOrNull { formatter ->
-            try {
-                LocalDateTime.parse(value, formatter)
-            } catch (exception: DateTimeParseException) {
-                null
-            }
-        }
+        return DateTimeParser.parseDateTime(value)
     }
 }

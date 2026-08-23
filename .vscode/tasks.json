@@ -14,12 +14,6 @@
       "problemMatcher": [],
     },
     {
-      "label": "Run",
-      "type": "shell",
-      "command": ".\\gradlew run --args=X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workout_data.csv",
-      "problemMatcher": [],
-    },
-    {
       "label": "Run on example data with debug (old)",
       "type": "shell",
       "command": ".\\gradlew run --debug-jvm --args=${workspaceFolder}\\usage_example\\workout_data.csv",

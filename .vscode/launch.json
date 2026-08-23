@@ -7,9 +7,9 @@
         {
             "type": "intellij_debugger",
             "request": "launch",
-            "name": "Run main",
+            "name": "Run with debug on example data",
             "mainClass": "org.example.AppKt",
-            "args": ["X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workouts.csv"],
+            "args": ["${workspaceFolder}\\usage_example\\workout_data.csv"],
             "cwd": "${workspaceFolder}"
         }
 

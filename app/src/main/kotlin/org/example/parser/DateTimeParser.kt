@@ -33,11 +33,6 @@ object DateTimeParser {
         val timeParts = timePart?.split(":")
         val hour = timeParts?.getOrNull(0)?.toIntOrNull()
         val minute = timeParts?.getOrNull(1)?.toIntOrNull()
-
-        // Print everything for debug
-        println("Input: $value")
-        println("Parsed date parts: day=$day, month=$month, year=$year")
-        println("Parsed time parts: hour=$hour, minute=$minute")
         
         if (day == null || month == null || year == null || hour == null || minute == null) {
             return null

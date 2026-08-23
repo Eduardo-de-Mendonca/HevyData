@@ -1,0 +1,61 @@
+Treino A:
+    Abdominal Na Máquina:
+        Peso máximo: 20.0 kg
+        Repetições: 12, 12
+
+    Cadeira Flexora (Máquina):
+        Peso máximo: 27.5 kg
+        Repetições: 12, 12, 12
+
+    Desenvolvimento de Ombros (Máquina de Placas):
+        Peso máximo: 10.0 kg
+        Repetições: 15, 15, 15
+
+    Leg Press Horizontal (Máquina):
+        Peso máximo: 42.5 kg
+        Repetições: 15, 15, 15
+
+    Remadas Iso-Lateral (Máquina):
+        Peso máximo: 30.0 kg
+        Repetições: 12, 12, 12
+
+    Rosca Martelo (Halter):
+        Peso máximo: 12.0 kg
+        Repetições: 12, 12, 12
+
+    Supino (Halter):
+        Peso máximo: 12.0 kg
+        Repetições: 12, 12, 12
+
+    Tríceps na Polia com Corda:
+        Peso máximo: 13.75 kg
+        Repetições: 12, 12, 12
+
+Treino B:
+    Abdominal Na Máquina:
+        Peso máximo: 20.0 kg
+        Repetições: 12, 12, 12
+
+    Desenvolvimento de Ombros (Máquina de Placas):
+        Peso máximo: 10.0 kg
+        Repetições: 15, 15, 15
+
+    Leg Press Horizontal (Máquina):
+        Peso máximo: 42.5 kg
+        Repetições: 15, 15, 15
+
+    Mesa Flexora (Máquina):
+        Peso máximo: 17.5 kg
+        Repetições: 15, 15, 15
+
+    Panturrilha no Leg Press 45º:
+        Peso máximo: 42.5 kg
+        Repetições: 12, 12, 12
+
+    Puxada Alta - Pegada Triângulo:
+        Peso máximo: 33.0 kg
+        Repetições: 15, 15, 12
+
+    Rosca Direta (Barra):
+        Peso máximo: 14.0 kg
+        Repetições: 15, 15, 15

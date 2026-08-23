@@ -16,7 +16,7 @@
     {
       "label": "Run",
       "type": "shell",
-      "command": ".\\gradlew run --args=X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workouts.csv",
+      "command": ".\\gradlew run --args=X:\\DuduClean\\ArquivosVScodePastaManual\\Outros\\2026\\Kotlin\\Pensamentos\\workout_data.csv",
       "problemMatcher": [],
     },
     {
